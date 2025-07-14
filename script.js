@@ -27,12 +27,18 @@ if (averageScore >= 9) {
 }
 
 // Step 4:Display Output
-console.log(` Student Name: ${internName}
-    Task Scores: ${taskOne}, ${taskTwo}, ${taskThree}
-    Average Score: ${roundedAverage}
-    Final Grade: ${grade}
-
-    `);
+const outputText = `
+  Name: ${internName}  
+  Task 1 Score: ${taskOne}  
+  Task 2 Score: ${taskTwo}  
+  Task 3 Score: ${taskThree}  
+  
+  Total Score: ${totalScore}  
+  Average Score: ${roundedAverage}  
+  
+  Final Grade: ${grade}
+`;
+document.getElementById("output").innerText = outputText;
 
     // Step 5: Feedback Message
     let feedback;
@@ -54,10 +60,5 @@ console.log(` Student Name: ${internName}
                             default:
                                 feedback = "No feedback available";
     }
-    console.log(`feedback:  ${feedback}`);
-    
-
-
-
- 
-
+    console.log(`feedback:  ${feedback}`
+);
